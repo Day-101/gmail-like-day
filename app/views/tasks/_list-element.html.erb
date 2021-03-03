@@ -1,4 +1,5 @@
 <%= task.title %>
 <%= ", to read: #{task.deadline.strftime('%D')}" unless task.deadline.nil? %>
-
-      
+<%= link_to task_path(task), method: :delete, class:"text-dark" do %>
+  <i class="fas fa-trash-alt"></i>
+<% end %>

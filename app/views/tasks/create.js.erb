@@ -1,5 +1,6 @@
 category = document.getElementById("<%= @task.category.title %>").firstElementChild;
 newBook = document.createElement("li");
+newBook.id = "<%= @task.id %>"
 newBook.innerHTML = "<%= j render 'list-element', task: @task %>"
 category.appendChild(newBook);
 
