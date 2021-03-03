@@ -40,7 +40,7 @@ before_action :authenticate_user!
     @task = Task.find(params[:id])
     @task.destroy
     respond_to do |format|
-      format.html {redirect_to root_path flash.notice = "Task deleted"}
+      # format.html {redirect_to root_path flash.notice = "Task deleted"}
       format.js {}
     end
   end
