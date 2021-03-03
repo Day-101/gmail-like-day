@@ -1,2 +1,14 @@
-//liElt = document.getElementById("<%= @task.id %>");
-console.log("Salut");
+liElt = document.getElementById("<%= @task.id %>");
+
+var opacity = 1;
+
+function fadeOut() {
+   if (opacity > 0) {
+      opacity -= .2;
+      liElt.style.opacity = opacity;
+      setTimeout(function(){fadeOut()}, 50);
+    }else{
+      liElt.parentNode.removeChild(liElt);
+   }
+}
+fadeOut();
