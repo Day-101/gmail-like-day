@@ -2,3 +2,15 @@ category = document.getElementById("<%= @task.category.title %>").firstElementCh
 newBook = document.createElement("li");
 newBook.innerHTML = "<%= j render 'list-element', task: @task %>"
 category.appendChild(newBook);
+
+var opacity = 0;
+
+function fadeIn() {
+   if (opacity < 1) {
+      opacity += .2;
+      newBook.style.opacity = opacity;
+      setTimeout(function(){fadeIn()}, 50);   
+   }
+}
+
+fadeIn();
