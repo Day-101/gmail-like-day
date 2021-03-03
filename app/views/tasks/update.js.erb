@@ -1,0 +1,21 @@
+task = document.getElementById("<%= @task.id %>");
+parent = task.parentNode;
+
+function validateTask(){
+	task.parentNode.removeChild(task);
+	parent.appendChild(task);
+	task.classList.add("text-muted", "line-through");
+}
+
+function unValidateTask(){
+	task.parentNode.removeChild(task);
+	parent.prepend(task);
+	task.classList.remove("text-muted", "line-through");
+}
+
+
+if("<%= @task.status %>" == "true"){
+	validateTask();
+}else{
+	unValidateTask();
+}

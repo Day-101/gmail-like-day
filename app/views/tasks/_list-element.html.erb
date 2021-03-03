@@ -1,3 +1,4 @@
+<%= check_box_tag :status, true, task.status, data: { remote: true, url: task_path(task), method: "put"} %>
 <%= task.title %>
 <%= ", to read: #{task.deadline.strftime('%D')}" unless task.deadline.nil? %>
 <%= link_to task_path(task), method: :delete, class:"text-dark", remote: true do %>

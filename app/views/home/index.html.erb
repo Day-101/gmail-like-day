@@ -7,9 +7,18 @@
   <div class="card" <%= "id=#{category.title}" %>>
     <ul>
       <% category.tasks.each do |task|  %>
-      <li id="<%= task.id %>" >
-        <%= render 'tasks/list-element', task: task %>
-      </li>
+        <% if task.status == false%>
+          <li id="<%= task.id %>" >
+            <%= render 'tasks/list-element', task: task %>
+          </li>
+        <% end %>
+      <% end %>
+      <% category.tasks.each do |task|  %>
+        <% if task.status %>
+          <li id="<%= task.id %>" class="text-muted line-through" >
+            <%= render 'tasks/list-element', task: task %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>
