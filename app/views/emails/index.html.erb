@@ -1,0 +1,11 @@
+<%= button_to "Receive an email", emails_path, remote:true, class:"btn btn-sm btn-dark" %>
+<div class="email-container">
+	<div>
+		<ul>
+			<% @emails.each do |email| %>	
+				<%= render "object", email: email %>
+			<% end %>
+		</ul>
+	</div>
+	<div id="email-content"></div>
+</div>

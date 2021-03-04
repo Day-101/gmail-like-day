@@ -1,0 +1,5 @@
+emailObjects = document.querySelectorAll(".email-container a");
+emailShow = document.getElementById("email-content");
+email = document.getElementById("<%= @email.id %>");
+emailShow.innerHTML = "<%= j render 'email', email: @email %>";
+email.firstElementChild.classList.remove("font-weight-bold");

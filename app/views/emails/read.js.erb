@@ -1,0 +1,6 @@
+email = document.getElementById("<%= @email.id %>");
+emailContent = document.getElementById("email-content")
+emailLink = emailContent.lastElementChild.lastElementChild;
+email.firstElementChild.classList.remove("font-weight-bold");
+emailContent.lastElementChild.removeChild(emailLink);
+emailContent.lastElementChild.insertAdjacentHTML("beforeend", '<%= j render "button", destination: email_unread_path(@email), title: "Unread" %>');

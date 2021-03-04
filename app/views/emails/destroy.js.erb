@@ -1,0 +1,6 @@
+emailView = document.getElementById("email-content");
+emailList = document.querySelector(".email-container ul");
+email = document.getElementById("<%= @email.id %>")
+
+emailView.innerHTML = "";
+emailList.removeChild(email);
