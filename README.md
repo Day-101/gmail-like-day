@@ -5,3 +5,5 @@
 * Of course, ```bundle install```, ```rails db:create``` and ```rails db:migrate``` before doing anything
 * You can also use ```rails db:seed``` to create some fake tasks
 ***
+
+One more thing, check my Heroku link : https://dashboard.heroku.com/apps/gmail-like-day/deploy/heroku-git
