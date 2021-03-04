@@ -1,7 +1,7 @@
-<p class="h1 text-center"><%= email.object %></p>
-<p class="text-center"><%= email.body %></p>
-<div class="d-flex">
-	<%= link_to "Delete", email_path(email), method: :delete, remote: true, class:"btn btn-danger" %>
+<p class="h1"><%= email.object %></p>
+<p class=""><%= email.body %></p>
+<div class="d-flex justify-content-center">
+	<%= link_to "Delete", email_path(email), method: :delete, remote: true, class:"btn btn-sm btn-danger mx-1" %>
 
 	<% if email.read %>
 		<%= render "button", destination: email_unread_path(email), title: "Unread" %>

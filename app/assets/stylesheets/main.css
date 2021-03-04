@@ -1,18 +1,9 @@
 .line-through { text-decoration: line-through; }
-html, body {height: 100%;}
+html, body {}
 
-.email-container {display:flex; height: 88%;}
+.email-container {}
 
-.email-container > * {border: 1px solid black; margin: 5px; flex: 1 0; padding: 15px;}
-
-.email-container li {
-	border: 1px solid black;
-	margin: 5px;
-	border-radius: 5px;
-	padding-left: 5px;
-	color: black;
-	margin-bottom: 8px;
-}
+.email-container > * {flex: 1 0}
 
 a:hover {
 	text-decoration: none;

@@ -1,11 +1,12 @@
-<%= button_to "Receive an email", emails_path, remote:true, class:"btn btn-sm btn-dark" %>
-<div class="email-container">
-	<div>
-		<ul>
+<%= button_to "Receive an email", emails_path, remote:true, class:"btn btn-info btn-lg btn-block my-3" %>
+
+<div class="email-container d-flex">
+	<div class="">
+		<ul class="list-group">
 			<% @emails.each do |email| %>	
 				<%= render "object", email: email %>
 			<% end %>
 		</ul>
 	</div>
-	<div id="email-content"></div>
+	<div id="email-content" class="pl-4"></div>
 </div>

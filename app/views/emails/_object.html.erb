@@ -1,8 +1,8 @@
 <%= link_to email_path(email), id: email.id, remote: true do %>
 	<% if email.read %>
-		<li>
+		<li class="list-group-item text-dark mb-1">
 	<% else %>
-		<li class="font-weight-bold">
+		<li class="font-weight-bold list-group-item text-dark mb-1">
 	<% end %>
 		<%= email.object %>
 	</li>
